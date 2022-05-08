@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+@namespace svg url('http://www.w3.org/2000/svg');
+
+:root {
+    --primarycolor: #B85042; /* Terracotta red */
+    --secondarycolor: #E7E8D1; /* light beige */
+    --accentcolor: #A7BEAE; /* muted teal */
+    --fontcolot: rgb(41, 38, 27);
+  }
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: var(--accentcolor);
+    scroll-behavior: smooth;
+    font-family: "Cardo", serif;
+    color: var(--fontcolot);
+    overflow-x: hidden;
+}
+::selection{
+    user-select: none;
+    color: var(--primarycolor);
+}
+section{
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    background-color: var(--secondarycolor);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+    margin: 0px 50px;
+    border-radius: 0px 0px 15px 15px;
+    border: 2px solid;
+    border-top: none;
+}
+header .logoText{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: var(--primarycolor);
+}
+header .left{
+    display: flex;
+    align-items: center;
+}
+header .right a{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+    cursor: pointer;
+    background-color: var(--accentcolor);
+    color: var(--secondarycolor);
+}
+
+header .right a img{
+    height: 25px;
+    margin: 2px;
+}
+header img{
+    height: 45px;
+}
+h1{
+    text-align: center;
+    margin: 50px 0px 25px 0px;
+    
+}
+
+h1 #totalSVG{
+    color: var(--primarycolor);
+}
+
+section button{
+    background-color: var(--secondarycolor);
+    font-weight: bold;
+    height: 50px;
+    width: 80px;
+    border: 2px solid var(--primarycolor);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Cardo";
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    grid-template-rows: auto;
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 2.5rem;
+    margin: 25px;
+}
+
+
+
+.card{
+    padding: 2rem 2rem;
+    border-radius: 0.25rem;
+    background-color: var(--secondarycolor);
+    border: 2px solid var(--fontcolot);
+    display: flex;
+    flex-flow: column;
+    gap: 55px;
+    align-items: center;
+    height: 200px;
+    overflow-x: clip;
+}
+
+.svg_place{
+    display: flex;
+    width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-place svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    fill: black;
+  }
+
+.btn_place button{
+    background-color: transparent;
+    font-weight: bold;
+    height: 50px;
+    width: 80px;
+    border: 2px solid var(--fontcolot);
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Cardo";
+    font-weight: 700;
+}
+
+.btn_place{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+
+
+::-webkit-scrollbar-track
+{
+	background-color: var(--accentcolor);
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: var(--accentcolor);
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: var(--secondarycolor);
+}

@@ -5,7 +5,7 @@
     "description": "Effortlessly copy and download SVG images from any webpage with the SVG Grabber Extension.",
     "author": "Yash Dayani",
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "/html/popup.html"
         },
     "permissions": [
         "tabs",
@@ -17,22 +17,22 @@
         "http://*/*"
     ],
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "/js/background.js"
       },
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["popup.js"]
+            "js": ["/js/popup.js"]
         }
     ],
     "web_accessible_resources": [
         {
-          "resources": ["svg_display.html", "svg_display.js"],
+          "resources": ["/html/svg_display.html", "/js/svg_display.js"],
           "matches": ["<all_urls>"]
         }
       ],
     "icons": {
-        "128": "logo.png"
+        "128": "/assets/128.png"
     },
     "content_security_policy": {
         "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"

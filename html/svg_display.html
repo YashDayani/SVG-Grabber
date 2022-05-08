@@ -1,14 +1,23 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG Downloads</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1 id="svgResult">Total SVG Found <span id="totalSVG">0</span></h1>
+    <header>
+        <div class="left"> <div><img src="../assets/128.png" alt=""></div>
+        <div class="logoText">Grabber</div></div>
+        <div class="right"><a href="https://www.github.com/yashdayani"><img src="../assets/Github.svg" alt="">Github</a></div>
+    </header>
+    
+    <h1 id="svgResult" >Total SVG Found <span id="totalSVG" class="num" data-val="10">0</span></h1>
+
     <div class="cards" id="svg-container">
-            <!-- <div class="card">
+        <!-- <div class="card">
                 <div class="svg_place">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" viewBox="0 0 256 256">
                         <path d="M40,88H73a32,32,0,0,0,62,0h81a8,8,0,0,0,0-16H135a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16Zm64-24A16,16,0,1,1,88,80,16,16,0,0,1,104,64ZM216,168H199a32,32,0,0,0-62,0H40a8,8,0,0,0,0,16h97a32,32,0,0,0,62,0h17a8,8,0,0,0,0-16Zm-48,24a16,16,0,1,1,16-16A16,16,0,0,1,168,192Z"></path>
@@ -19,14 +28,11 @@
                     <button class="svg_download">Download</button>
                 </div>
             </div> -->
-        </div>
-        
-        </div>
-        
-
     </div>
-    <script src="svg_display.js"></script>
-    <script src="interact.js"></script>
-    <script src="clipboard.js"></script>
+
+    <script src="../js/svg_display.js"></script>
+    <script src="../js/interact.js"></script>
+    <script src="../js/clipboard.js"></script>
 </body>
+
 </html>
