@@ -1,0 +1,85 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+}
+section button{
+    background-color: #ffffff00;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    height: 50px;
+    width: 80px;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+section .btn {
+    border: 2px solid white;
+    border-style: dashed;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 50px;
+grid-row-gap: 50px;
+padding: 2rem 2rem;
+}
+.card{
+    color: #353336;
+    padding: 2rem 2rem;
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 48px -16px rgba(255, 255, 255, 0.25);
+    border: 2px solid;
+    display: flex;
+    flex-flow: column;
+    gap: 55px;
+    align-items: center;
+    height: 200px;
+}
+
+svg{
+    height: 90px;
+}
+
+.btn_place button{
+    background-color: #ffffff00;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    height: 50px;
+    width: 80px;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.btn_place{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
