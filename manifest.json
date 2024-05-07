@@ -27,7 +27,7 @@
     ],
     "web_accessible_resources": [
         {
-          "resources": ["svg_display.html", "svg_display.js", "interact.js"],
+          "resources": ["svg_display.html", "svg_display.js"],
           "matches": ["<all_urls>"]
         }
       ],

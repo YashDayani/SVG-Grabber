@@ -1,6 +1,14 @@
+:root {
+    --primarycolor: #B85042; /* Terracotta red */
+    --secondarycolor: #E7E8D1; /* light beige */
+    --accentcolor: #A7BEAE; /* muted teal */
+  }
+
+
 body{
     padding: 0;
     margin: 0;
+    background-color: var(--accentcolor);
 }
 
 section{
@@ -16,7 +24,7 @@ h1{
     text-align: center;
 }
 section button{
-    background-color: #ffffff00;
+    background-color: var(--secondarycolor);
     color: rgb(0, 0, 0);
     font-weight: bold;
     height: 50px;
@@ -28,12 +36,6 @@ section button{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-}
-section .btn {
-    border: 2px solid white;
-    border-style: dashed;
-    padding: 5px;
-    border-radius: 7px;
 }
 
 .cards{
@@ -48,7 +50,7 @@ padding: 2rem 2rem;
     color: #353336;
     padding: 2rem 2rem;
     border-radius: 0.25rem;
-    background-color: #ffffff;
+    background-color: var(--secondarycolor);
     box-shadow: 0px 10px 48px -16px rgba(255, 255, 255, 0.25);
     border: 2px solid;
     display: flex;
@@ -65,11 +67,20 @@ padding: 2rem 2rem;
 
 
 
-svg{
-    height: 50px;
-    width: 50px;
+.svg_place{
+    display: flex;
+    width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
 }
 
+.svg-place svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    fill: black;
+  }
 
 
 
@@ -98,4 +109,23 @@ svg{
     align-items: center;
     justify-content: center;
     gap: 25px;
+}
+
+
+
+
+::-webkit-scrollbar-track
+{
+	background-color: var(--accentcolor);
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: var(--accentcolor);
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: var(--secondarycolor);
 }

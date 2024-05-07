@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const svgContainer = document.getElementById('svg-container');
+  const totalSVG = document.getElementById('totalSVG');
+  const svgResult = document.getElementById('svgResult');
 
   // Retrieve the fetched SVGs from the service worker
   chrome.runtime.sendMessage({ action: 'getSVGs' }, (response) => {
@@ -17,9 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
         `;
+        totalSVG.textContent=svgArray.length;
       });
     } else {
-      svgContainer.textContent = 'No SVGs fetched.';
+      svgResult.textContent = 'No SVGs fetched. 😣';
     }
   });
 });

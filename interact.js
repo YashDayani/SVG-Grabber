@@ -1,54 +1,46 @@
-// Select all cards
-const cards = document.querySelectorAll(".card");
+// svg_display_script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const svgContainer = document.getElementById('svg-container');
 
-// Loop through each card
-cards.forEach(card => {
-    // Select copy and download buttons within the current card
-    const copyButton = card.querySelector(".svg_copy");
-    const downloadButton = card.querySelector(".svg_download");
+    // Add click event listener to each download button
+    svgContainer.addEventListener('click', function(event) {
+        if (event.target.classList.contains('svg_download')) {
+            // Get the SVG content
+            const svgContent = event.target.parentElement.previousElementSibling.innerHTML;
 
-    // Add event listener to the copy button
-    copyButton.addEventListener("click", () => {
-        // Get the SVG content within the current card
-        const svgElement = card.querySelector('.svg_place svg');
-        const svgContent = svgElement.outerHTML;
+            // Create a blob from the SVG content
+            const blob = new Blob([svgContent], { type: 'image/svg+xml' });
 
-        // Create a textarea element to hold the SVG content
-        const textarea = document.createElement('textarea');
-        textarea.value = svgContent;
-        document.body.appendChild(textarea);
+            // Create a temporary anchor element
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'image.svg'; // Set the filename for the downloaded file
 
-        // Select and copy the SVG content
-        textarea.select();
-        document.execCommand('copy');
+            // Simulate click on the anchor element to trigger download
+            a.click();
 
-        // Remove the textarea
-        document.body.removeChild(textarea);
+            // Clean up
+            URL.revokeObjectURL(a.href);
+        }
+    });
+});
 
-        // Notify the user
-        alert('SVG copied to clipboard!');
+
+// svg_display_script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const svgContainer = document.getElementById('svg-container');
+    const clipboard = new ClipboardJS('.svg_copy', {
+        text: function(trigger) {
+            return trigger.parentElement.previousElementSibling.innerHTML;
+        }
     });
 
-    // Add event listener to the download button
-    downloadButton.addEventListener("click", () => {
-        // Get the SVG element within the current card
-        const svgElement = card.querySelector('.svg_place svg');
+    clipboard.on('success', function(event) {
+        alert('SVG copied to clipboard!');
+        event.clearSelection();
+    });
 
-        // Create a Blob URL for the SVG content
-        const svgBlob = new Blob([svgElement.outerHTML], { type: 'image/svg+xml' });
-        const svgUrl = URL.createObjectURL(svgBlob);
-
-        // Create a temporary anchor element
-        const a = document.createElement('a');
-        a.href = svgUrl;
-        a.download = 'image.svg';
-
-        // Programmatically click the anchor element to initiate download
-        document.body.appendChild(a);
-        a.click();
-
-        // Remove the anchor element
-        document.body.removeChild(a);
-        URL.revokeObjectURL(svgUrl);
+    clipboard.on('error', function(event) {
+        console.error('Failed to copy SVG:', event.error);
     });
 });

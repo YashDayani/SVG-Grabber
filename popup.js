@@ -23,30 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Helper function to fetch SVG elements from the current tab
-// Helper function to fetch SVG elements from the current tab
-// Helper function to fetch SVG elements from the current tab
-// function fetchSVGs() {
-//   const svgElements = Array.from(document.querySelectorAll('svg'))
-//     .map(svg => {
-//       const svgClone = svg.cloneNode(true);
-//       svgClone.removeAttribute('height');
-//       svgClone.removeAttribute('width');
-//       svgClone.removeAttribute('style');
-//       const svgString = svgClone.outerHTML;
-
-//       // Check if the SVG string is not empty and doesn't contain <parsererror>
-//       if (svgString.trim().length > 0 && !svgString.includes('<parsererror')) {
-//         return svgString;
-//       }
-//     })
-//     .filter(svgString => svgString !== undefined); // Filter out undefined values
-
-//   return svgElements;
-// }
-
-
-
 
 function fetchSVGs() {
   const svgSet = new Set(); // Create a Set to store unique SVG strings
