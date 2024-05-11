@@ -34,6 +34,7 @@
     "icons": {
         "128": "/assets/128.png"
 "64": "/assets/64.png"
+"32": "/assets/32.png"
     },
     "content_security_policy": {
         "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
